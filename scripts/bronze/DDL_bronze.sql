@@ -1,4 +1,10 @@
-
+/*
+===================================================================
+DDL Scripts: Create Bronze Tables
+===================================================================
+Purpose:
+	Creates tables in Bronze schemas, dropping the table if already exist.
+*/
 
 -- Create Table CRM_Customer Info
 IF OBJECT_ID ('bronze.crm_cust_info' , 'U') IS NOT NULL
@@ -66,4 +72,5 @@ CREATE TABLE bronze.erp_px_cat_g1v2 (
 	cat NVARCHAR(50),
 	subcat NVARCHAR(50),
 	maintenance NVARCHAR(50)
+
 );
