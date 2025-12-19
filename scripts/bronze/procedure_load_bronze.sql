@@ -1,3 +1,17 @@
+/*
+========================================================================
+STORED PROCEDURE: Load Bronze Layer (Source -> Bronze)
+========================================================================
+Purpose:
+	Load data into 'bronze' schema from external CSV files.
+	Trunacates the bronze table before loading the data.
+	Use 'Bulk Insert' command to load the data.
+
+Usage example:
+	EXEC bronze.load_bronze;
+========================================================================
+*/
+
 
 -- STORE PROCEDURE BRONZE LAYER
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
@@ -137,5 +151,6 @@ END
 
 
 EXEC bronze.load_bronze;
+
 
 
